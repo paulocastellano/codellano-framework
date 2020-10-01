@@ -7,6 +7,7 @@ import * as path from 'path'
 import { config, engine } from 'express-edge'
 
 import Cors from '../config/cors'
+import Redis from '../config/redis'
 import Database from '../config/database'
 
 import RouterApi from '../routes/api'
@@ -18,11 +19,14 @@ class Kernel {
   public app: express.Application
   public cors: Cors
   private _database: Database
+  private redis: Redis
 
   constructor() {
     dotenv.config()
     this.cors = new Cors()
+
     this.app = express()
+    this.cache()
     this.database()
     this.edge()
     this.middler()
@@ -35,6 +39,10 @@ class Kernel {
     if (process.env.APP_ENV !== 'testing') {
       this._database.createConnection()
     }
+  }
+
+  cache() {
+    this.redis = new Redis()
   }
 
   middler() {

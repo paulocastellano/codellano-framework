@@ -1,8 +1,8 @@
-version: "3"
+version: '3'
 
 services:
   server:
-    build: "."
+    build: '.'
     volumes:
       - ./:/usr/src/app
       - ./node_modules:/usr/src/app/node_modules
@@ -13,11 +13,17 @@ services:
     links:
       - db
     ports:
-      - "3000:3000"
+      - '3000:3000'
 
   db:
-    image: "mongo"
+    image: 'mongo'
     ports:
-      - "27018:27017"
+      - '27018:27017'
     environment:
       - AUTH=no
+
+  redis:
+    image: 'redis:alpine'
+    restart: unless-stopped
+    ports:
+      - '6399:6379'
