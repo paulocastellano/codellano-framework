@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  server:
+    build: "."
+    volumes:
+      - ./:/usr/src/app
+      - ./node_modules:/usr/src/app/node_modules
+    environment:
+      NODE_ENV: development
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - "3000:3000"
+
+  db:
+    image: "mongo"
+    ports:
+      - "27018:27017"
+    environment:
+      - AUTH=no
