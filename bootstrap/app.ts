@@ -3,13 +3,13 @@ import * as bodyParser from "body-parser";
 import * as dotenv from "dotenv";
 import * as compression from "compression";
 
-import Cors from "./config/cors";
-import Database from "./config/database";
+import Cors from "../config/cors";
+import Database from "../config/database";
 
-import RouterApi from "./routes/api";
-import RouterWeb from "./routes/web";
+import RouterApi from "../routes/api";
+import RouterWeb from "../routes/web";
 
-import AuthMiddleware from "./app/middlewares/auth";
+import AuthMiddleware from "../app/middlewares/auth";
 
 class Boostrap {
   public app: express.Application;
@@ -29,7 +29,7 @@ class Boostrap {
   middler() {
     this.app.use(this.cors.init());
 
-    this.app.use(AuthMiddleware.handle);
+    // this.app.use(AuthMiddleware.handle);
 
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));

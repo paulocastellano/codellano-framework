@@ -2,10 +2,10 @@
   "name": "curso-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
+  "main": "bootstrap/server.ts",
   "scripts": {
     "compile": "tsc -w",
-    "start": "nodemon  server.ts",
+    "start": "nodemon bootstrap/server.ts",
     "test": "jest"
   },
   "keywords": [],

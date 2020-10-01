@@ -1,4 +1,4 @@
-import Boostrap from "./bootstrap";
+import Boostrap from "./app";
 
 let port = process.env.PORT || 3000;
 
