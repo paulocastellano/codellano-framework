@@ -1,27 +1,19 @@
-# Simple docker for Laravel
+# Codellano Framework
 
-## Requeriments
+Simple typescript framework based on [Laravel](https://laravel.com) Structure.
 
-- [docker](https://www.docker.com/)
+## Databases supported
 
-## This boilerplate contain
-
-- [nginx](https://nginx.org)
-- [php](https://php.net)
-- [composer](https://getcomposer.org/)
-- [mysql](https://www.mysql.com/)
-- [postgres](https://www.postgresql.org/)
+- [mongodb](https://mongodb.com/)
 - [redis](https://redis.io/)
-- [phpmyadmin](https://www.phpmyadmin.net/)
-- [pgadmin](https://www.pgadmin.org/)
-- [maildev](https://github.com/maildev/maildev)
 
 ## Instalation steps
 
 ```
- 1. copy docker-compose.yml, Dockerfile and docker-compose folder to inside your project
- 2. build image: docker-compose build
- 3. run it: docker-compose up -d
+ 1. Clone this repository
+ 2. npm install
+ 3. build image: docker-compose build
+ 4. run it: docker-compose up -d
 ```
 
 ## License
