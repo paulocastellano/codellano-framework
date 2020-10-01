@@ -1,7 +1,7 @@
-import Boostrap from "./app";
+import Kernel from './kernel'
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3000
 
-Boostrap.app.listen(port, function () {
-  console.log(`server exec at ${port}`);
-});
+Kernel.app.listen(port, function () {
+  console.log(`✅  Server running on the port: ${port}`)
+})

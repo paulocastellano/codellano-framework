@@ -3,20 +3,12 @@
     "target": "es6",
     "module": "commonjs",
     "outDir": "dist",
-    "typeRoots": [
-      "../node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ]
+    "typeRoots": ["../node_modules/@types"],
+    "types": ["node", "@types/jest"],
+    "moduleResolution": "node"
   },
-  "include": [
-    "**/*.ts",
-    "*.ts",
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+  "include": ["**/*.ts", "*.ts"],
+  "exclude": ["node_modules", "coverage", "tests/*.ts"],
   "buildOnSave": true,
   "compileOnSave": true
 }

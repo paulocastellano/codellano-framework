@@ -1,4 +1,4 @@
-import * as moongose from "mongoose";
+import * as moongose from 'mongoose'
 
 const User = new moongose.Schema({
   name: { type: String, required: true },
@@ -6,6 +6,6 @@ const User = new moongose.Schema({
   password: { type: String, required: true },
   avatar: { type: String, required: false },
   createdAt: { type: Date, default: Date.now },
-});
+})
 
-export default User;
+export default User

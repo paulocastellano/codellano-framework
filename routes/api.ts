@@ -1,7 +1,9 @@
-import * as express from "express";
+import * as express from 'express'
 
-const routerApi = express.Router();
+const routerWeb = express.Router()
 
-// routerApi.route("/users").get();
+routerWeb.get('/', (req, res) => {
+  res.json({ message: 'Welcome to Codellano' })
+})
 
-export default routerApi;
+export default routerWeb
