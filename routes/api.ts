@@ -1,9 +1,12 @@
 import * as express from 'express'
 
+import loginController from '../app/controllers/auth/loginController'
+import registerController from '../app/controllers/auth/registerController'
+
 const routerWeb = express.Router()
 
-routerWeb.get('/', (req, res) => {
-  res.json({ message: 'Welcome to Codellano' })
-})
+// auth
+routerWeb.get('/register', registerController.register)
+routerWeb.get('/login', loginController.login)
 
 export default routerWeb

@@ -1,5 +1,7 @@
-class authController {
-  login(req, res) {}
+class LoginController {
+  login(req, res) {
+    res.json({ message: 'Login' })
+  }
 }
 
-export default new authController();
+export default new LoginController()

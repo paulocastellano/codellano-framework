@@ -1,9 +1,9 @@
 import * as request from 'supertest'
-import Kernel from '../bootstrap/kernel'
+import Kernel from '../../bootstrap/kernel'
 
-describe('Route testing', () => {
+describe('Login testing', () => {
   it('Should return an http 200 and a "message" property (route: GET /)', async () => {
-    const res = await request(Kernel.app).get('/api')
+    const res = await request(Kernel.app).get('/api/login')
     expect(res.status).toEqual(200)
     expect(res.body).toHaveProperty('message')
   })
